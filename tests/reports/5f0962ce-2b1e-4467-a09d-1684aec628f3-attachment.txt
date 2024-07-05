@@ -1,0 +1,29 @@
+Normal click failed: Message: element click intercepted: Element <h4 class="m-menu__link-text">...</h4> is not clickable at point (115, 498). Other element would receive the click: <div class="swal2-container swal2-center swal2-fade swal2-shown" style="overflow-y: auto;">...</div>
+  (Session info: chrome=126.0.6478.127)
+Stacktrace:
+0   chromedriver                        0x000000010529aa80 chromedriver + 4385408
+1   chromedriver                        0x000000010529338c chromedriver + 4354956
+2   chromedriver                        0x0000000104eb0b0c chromedriver + 281356
+3   chromedriver                        0x0000000104ef8ce0 chromedriver + 576736
+4   chromedriver                        0x0000000104ef7284 chromedriver + 569988
+5   chromedriver                        0x0000000104ef5414 chromedriver + 562196
+6   chromedriver                        0x0000000104ef45b0 chromedriver + 558512
+7   chromedriver                        0x0000000104ee9cfc chromedriver + 515324
+8   chromedriver                        0x0000000104ee9734 chromedriver + 513844
+9   chromedriver                        0x0000000104f2bd24 chromedriver + 785700
+10  chromedriver                        0x0000000104ee7eec chromedriver + 507628
+11  chromedriver                        0x0000000104ee88c4 chromedriver + 510148
+12  chromedriver                        0x000000010526243c chromedriver + 4154428
+13  chromedriver                        0x0000000105266ea0 chromedriver + 4173472
+14  chromedriver                        0x0000000105247ff8 chromedriver + 4046840
+15  chromedriver                        0x000000010526778c chromedriver + 4175756
+16  chromedriver                        0x000000010523afb8 chromedriver + 3993528
+17  chromedriver                        0x000000010528521c chromedriver + 4297244
+18  chromedriver                        0x0000000105285398 chromedriver + 4297624
+19  chromedriver                        0x0000000105292f84 chromedriver + 4353924
+20  libsystem_pthread.dylib             0x00000001861f2f94 _pthread_start + 136
+21  libsystem_pthread.dylib             0x00000001861edd34 thread_start + 8
+. JavaScript will try clicking.
+Clicking with JavaScript was successful.
+Element clicked successfully.
+Element clicked successfully.
