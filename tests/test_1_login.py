@@ -1,5 +1,4 @@
 import os
-from time import sleep
 import pytest
 import pyperclip
 from selenium.webdriver.support.wait import WebDriverWait
@@ -80,10 +79,8 @@ class TestProfile:
 
     def navigate_safes_pages(self):
         self.login()
-        sleep(1)
         self.page.find_side_menu_money()
         self.click_element(self.page.side_menu_money)
-        sleep(1)
         self.page.find_side_menu_safes()
         self.click_element(self.page.side_menu_safes)
 
@@ -91,7 +88,6 @@ class TestProfile:
         self.navigate_safes_pages()
         self.page.find_edit_main_safe_button()
         self.click_element(self.page.edit_main_safe_button)
-        sleep(3)
 
     def selecting_currency(self): # Website doesn't allow to change it for safe opening. So try this for other edits
         self.page.find_dropdown_main_safe_currency()
@@ -105,10 +101,8 @@ class TestProfile:
 
     def test_successful_login(self):
         self.login()
-        sleep(2)
         Driver.screenshot(self.driver, "../screenshots/screenshots_1_login", "test_1_1_login_success.png")
         self.close_all_campaign_pop_ups()
-        sleep(4)
         Driver.screenshot(self.driver, "../screenshots/screenshots_1_login", "test_1_2_login_success.png")
         self.get_new_url()
         assert self.new_url == const.url_main_page, "Login Failed"
@@ -116,15 +110,11 @@ class TestProfile:
 
     def test_successful_first_edit_main_safe(self):
         self.navigate_main_safe_edit()
-        sleep(1)
         Driver.screenshot(self.driver, "../screenshots/screenshots_1_login", "test_2_1_edit_safe_success.png")
-        sleep(1)
         self.enter_main_safe_balance()
-        sleep(3)
         Driver.screenshot(self.driver, "../screenshots/screenshots_1_login", "test_2_2_edit_safe_success.png")
         self.page.find_button_submit_main_safe_edit()
         self.click_element(self.page.button_submit_main_safe_edit)
-        sleep(3)
         Driver.screenshot(self.driver, "../screenshots/screenshots_1_login", "test_2_3_edit_safe_success.png")
         self.page.find_td_main_safe_balance_amount()
         assert self.page.td_main_safe_balance_amount == const.main_safe_opening_balance, "Amounts matching failed"
